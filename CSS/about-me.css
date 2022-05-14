@@ -1,0 +1,36 @@
+﻿img {
+    max-width: 100%;
+}
+.section-one {
+    background-image: url(../Images/three.jpg);
+    background-size: cover;
+    min-height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-one-text-container {
+    font-size: 60px;
+}
+.section-two {
+    min-height: 300px;
+    padding-top: 80px;
+    background-color: aqua;
+}
+.section-to-row {
+    min-height: 150px;
+    display: flex;
+}
+.flex-parent-50 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-two-img-container {
+    width: 350px;
+}
+.section-two-text-container {
+    background-color: silver;
+    width: auto;
+}
