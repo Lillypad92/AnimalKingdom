@@ -6,14 +6,13 @@ class Header extends HTMLElement {
         this.innerHTML = `
 <style>
     header {
-     background-color: #08c9ff;
+      background-image: url(../Images/three.jpg); 
        text-align: center;
-         color: white;
+         color: black;
 }
 </style>
 <header class="p-5">
-    <h1>Webbutvecklingsprojekt</h1>
-        <h4>Animal Kingdom</h4>
+    <h1>Animal Kingdom</h1>
 </header>
     `;
     }
