@@ -5,8 +5,6 @@ class Card extends HTMLElement {
 
     connectedCallback() {
 
-        
-
         var link = this.getAttribute("data-link");
         var header = this.getAttribute("data-header");
         var img = this.getAttribute("data-img");
