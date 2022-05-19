@@ -1,36 +1,17 @@
 ﻿img {
     max-width: 100%;
 }
-.section-one {
-    background-image: url(../Images/three.jpg);
-    background-size: cover;
-    min-height: 210px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.about-me-intro{
+    background-color: #7E7472
 }
-.section-one-text-container {
-    font-size: 60px;
+.about-me-intro p{
+    color: white;
 }
-.section-two {
-    min-height: 300px;
-    padding-top: 80px;
-    background-color: aqua;
+.about-me-intro h4{
+    color: white;
 }
-.section-to-row {
-    min-height: 150px;
-    display: flex;
-}
-.flex-parent-50 {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.section-two-img-container {
-    width: 350px;
-}
-.section-two-text-container {
-    background-color: silver;
-    width: auto;
+
+.about_me_something{
+    background-color: #A29C9B
 }
