@@ -1,17 +1,43 @@
-﻿img {
-    max-width: 100%;
-}
-
-.about-me-intro{
+﻿.about-me-intro{
     background-color: #7E7472
 }
 .about-me-intro p{
-    color: white;
+    color: black;
+    font-family: cursive;
+    
 }
 .about-me-intro h4{
-    color: white;
+    color: black;
+    font-family: cursive;
 }
-
-.about_me_something{
+.about-me-info-text{
     background-color: #A29C9B
 }
+.about-me-name {
+    text-align: center;
+}
+.about-me-porttrait {
+    padding-left: 35px;
+}
+.container {
+    padding-top: 30px;
+}
+.row p {
+    padding-left: 12px;
+}
+.row h2, h3, h4 {
+    padding-left: 12px;
+}
+.horseCarousel  {
+    margin: auto;
+    max-width: 465px;
+}
+h5 {
+    color: white;
+}
+.carousel-item p {
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+ 

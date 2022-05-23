@@ -6,6 +6,9 @@ class Navigation extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <style>
+        .navbar-color {
+          background-color: #f1ece9;
+        }
         li, nav-item {
             padding: 4px;   
         }
@@ -21,7 +24,7 @@ class Navigation extends HTMLElement {
           }
         </style>
 
-    <nav class="navbar navbar-expand-sm bg-light sticky-top">
+    <nav class="navbar navbar-expand-sm sticky-top navbar-color">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">

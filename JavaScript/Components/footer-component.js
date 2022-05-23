@@ -4,11 +4,13 @@ class Footer extends HTMLElement {
     }
 
     connectedCallback() {
-
-      
-
-        this.innerHTML = `
-        <footer class="text-center text-lg-start bg-light">  
+      this.innerHTML = `
+      <style>
+        footer {
+          background-color:#f1ece9;
+        }
+      </style>
+        <footer class="text-center text-lg-start">  
     <section>
       <div class="container text-center text-md-start mt-5">
         <div class="row mt-3">
