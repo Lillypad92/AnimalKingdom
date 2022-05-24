@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tryckarfisk</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+
+    <script src="https://kit.fontawesome.com/3888d8353b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/titan-triggerfish.css">
+
+    <script src="../JavaScript/Components/header-component.js" type="text/javascript" defer></script>
+    <script src="../JavaScript/Components/navigation-component.js" type="text/javascript" defer></script>
+    <script src="../JavaScript/Components/footer-component.js" type="text/javascript" defer></script>
+    <script src="../JavaScript/Components/endangered-component.js" type="text/javascript" defer></script>
+    <script src="../JavaScript/Components/list-group-component.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <!--För att undvika att dublicera kod, exempel header till varje sida har jag gjort om det till en component istället i en JavaScript fil.
+        På detta vis underlättar det att inte behöva skriva om varje header element kod på varje sida vid förändringar. 
+        Vid förändringar behövar jag bara ändra en gång.-->
+    <header-component></header-component>
+    <navigation-component></navigation-component>
+
+    <main role="main">
+        <div class="container">
+            <div class="wrapper-text">
+                <h3>Tryckarfisk</h3>
+                <p>Balistoides viridescens</p>
+                <p>I Maldiverna kallas denna tryckarfisk för nasty character!</p>
+            </div>
+            <img src="../Images/Indian Ocean/test.png" class="rounded mx-auto d-block" alt="Big yellow fish">
+
+
+            <h4>Fakta om tryckarfisk</h4>
+            <p>Tryckarifksen har en stor kompakt kropp med mycket stark käkar och tänder. Färgerna varierar från
+                att
+                vara grön till mörk grå samt gul i kroppen med inslag av gult, grönt eller lilafärg med svarta
+                toppar på
+                fenorna.
+                Deras mat består utav sjöborrar, koraller samt skal- och kräftdjur. <br>
+                Tryckarfisken har ett naturligt gift i sig och om man blir biten är det stor risk att man får en
+                infektion, man ska därför uppsöka sjukhus.
+            </p>
+            <p>
+                <a data-toggle="collapse" href="#collapse-titan-triggerfish" role="button" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    <i class="fa-solid fa-plus"></i> Läs mer
+                </a>
+            </p>
+            <div class="collapse" id="collapse-titan-triggerfish">
+                <p>I Maldiverna kallade lokalbefolkningen tryckarfisken för nasty character, att fisken har fått
+                    smeknamnet beror på att under april månad är det parningssäsong, fisken blir aggressiv och
+                    den
+                    vaktar sitt territorium. <br>
+                    Tryckarfiskens territorium är som upp och nervänd vägkona, störst yta på territoriumet är
+                    uppe
+                    på
+                    havsytan och minst yta är nere vid korallbotten. För att undivka att bli förföljd eller
+                    attackerad
+                    så ska man simma horisontellt och inte upp mot havsytan, där fisken kan fortsätta att
+                    attackera.
+                    <br>
+                    Genom att vända sig så att simfenorna är mot fisken kan man skydda sig medan man simmar
+                    ifrån
+                    territoriumet.
+                </p>
+            </div>
+
+            <h4>Fakta om djuret 2</h4>
+            <p>text text text</p>
+            <p>Läs mer</p>
+
+            <about-animal-component data-length="30 - 70 cm" data-habitat="Korallrev" data-weight="14 kg" data-age="8 år" data-family="Balistidae"></about-animal-component>
+        </div>
+    </main>
+
+    <footer-component></footer-component>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.container {
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+     
+}
+.wrapper {
+    align-items: center;
+    justify-content: center;
+}
+.wrapper-text {
+    text-align: center;
+}
+img {
+    padding-bottom: 20px;
+}
+.wrapper-text2 p {
+    width: 80%;
+}

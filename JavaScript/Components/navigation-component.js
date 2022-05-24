@@ -1,32 +1,34 @@
 class Navigation extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <style>
-        .navbar-color {
+        .navigation-color {
           background-color: #f1ece9;
         }
-        li, nav-item {
-            padding: 4px;   
+        .navigation-bar {
+          justify-content: center;
         }
-        ul {
-            font-weight: 500px
+        .navigation-ul-list {
+            font-size: large;
             margin: 0 25px;
             color: #fff;
-            text-decoration: none; 
+            text-decoration: none;
+            padding: 4px; 
         }
-        nav a:hover {
-            padding-bottom: 5px;
-            box-shadow: inset 0 -2px 0 0 #f17fb6;
-          }
+        .navigation-ul-list a:hover {
+          padding-bottom: 5px;
+          box-shadow: inset 0 -2px 0 0 #f17fb6;
+        }
+      
         </style>
 
-    <nav class="navbar navbar-expand-sm sticky-top navbar-color">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-sm sticky-top navigation-color">
+    <div class="collapse navbar-collapse navigation-bar" id="navbarNav">
+      <ul class="navbar-nav navigation-ul-list">
         <li class="nav-item active">
           <a class="nav-link" href="start-page.html"><i class="fa-solid fa-house"></i> Hem</a>
         </li>
@@ -36,10 +38,13 @@ class Navigation extends HTMLElement {
         <li class="nav-item">
           <a class="nav-link" href="animals.html"><i class="fa-solid fa-paw"></i> Djur</a>
         </li>
+        <li class="nav-item">
+        <a class="nav-link" href="improvments.html"><i class="fa-solid fa-feather-pointed"></i> Förbättringsförslag</a>
+      </li>
       </ul>
     </div>
   </nav>
       `;
-    }
+  }
 }
 customElements.define('navigation-component', Navigation);

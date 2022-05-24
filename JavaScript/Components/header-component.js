@@ -7,7 +7,7 @@ class Header extends HTMLElement {
 <style>
     header {
       background-image: url(../Images/three.jpg); 
-       text-align: center;
+        text-align: center;
          color: black;
 }
 </style>
