@@ -12,19 +12,14 @@ class AboutAnimal extends HTMLElement {
 
         this.innerHTML =`
         <style>
-        .list-group {
-            width: 80%;
-            display: flex;
-        }
         
-
         </style>
 
         <div class="list-group-info">
         <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between">
-                Längd
-                <span>`+ length +`</span>
+                Familj
+                <span>`+ family +`</span>
             </li>
             <li class="list-group-item d-flex justify-content-between">
                 Habitat
@@ -39,8 +34,8 @@ class AboutAnimal extends HTMLElement {
                 <span>`+ age +`</span>
             </li>
             <li class="list-group-item d-flex justify-content-between">
-                Familj
-                <span>` + family +`</span>
+                Längd
+                <span>` + length +`</span>
             </li>
         </ul>
     </div>

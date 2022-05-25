@@ -4,16 +4,14 @@
     justify-content: center;
      
 }
-.wrapper {
-    align-items: center;
-    justify-content: center;
-}
 .wrapper-text {
     text-align: center;
 }
 img {
     padding-bottom: 20px;
 }
-.wrapper-text2 p {
+
+.triggerfish-info-text {
     width: 80%;
+    padding-left: 190px;
 }
