@@ -24,9 +24,15 @@ class Breadcrumb extends HTMLElement {
 
     var links = JSON.parse(this.getAttribute("data-links"));
 
-    this.innerHTML = `    
+    this.innerHTML = `
+    <style>
+    .breadcrumb {
+      background-color:white;
+    }
+    
+    </style>    
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">` + 
+      <ol class="breadcrumb justify-content-center">` + 
           this.createLinks(links) + 
           `</ol>
     </nav>
