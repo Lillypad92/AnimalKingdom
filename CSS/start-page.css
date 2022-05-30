@@ -1,3 +1,17 @@
 main {
     padding-top: 35px;
 }
+.container-news {
+    margin: auto;
+    display: table;
+}
+img:hover {
+    opacity: 0.8;
+}
+.zoom {
+    transition: transform .2s;
+    margin: auto;
+}
+.zoom:hover {
+    transform: scale(1.1);
+}
