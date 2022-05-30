@@ -1,8 +1,10 @@
 const button = document.getElementById("submitButton");
+const paragraphs = document.createElement("p");
 
 button.addEventListener("click", function(e){
     e.preventDefault();
 
-    let something = document.getElementById("hideME");
-    something.style.display = "none";
+    let hideSurvey = document.getElementById("hideMe");
+    hideSurvey.style.display = "none";
+   
 });
