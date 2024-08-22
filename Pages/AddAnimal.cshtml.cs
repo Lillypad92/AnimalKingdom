@@ -3,13 +3,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AnimalKingdom.Pages
 {
-    public class AboutModel : PageModel
+    public class AddAnimalModel : PageModel
     {
         public void OnGet()
         {
-          
         }
-
     }
-    
 }

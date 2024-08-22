@@ -25,6 +25,10 @@ namespace AnimalKingdom.Migrations
             modelBuilder.Entity("AnimalKingdom.Animal", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CountryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
@@ -37,12 +41,14 @@ namespace AnimalKingdom.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CountryId");
+
                     b.ToTable("Animals");
                 });
 
             modelBuilder.Entity("AnimalKingdom.Country", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("CountryId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -50,16 +56,16 @@ namespace AnimalKingdom.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("CountryId");
 
-                    b.ToTable("Country");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("AnimalKingdom.Animal", b =>
                 {
                     b.HasOne("AnimalKingdom.Country", "Country")
                         .WithMany("Animals")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

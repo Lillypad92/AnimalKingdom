@@ -1,7 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,7 +7,8 @@ namespace AnimalKingdom
     public class AnimalContext: DbContext
     {
         public DbSet<Animal> Animals { get; set; }
-        
+        public DbSet<Country> Countries { get; set; }
+
         public string DbPath { get; }
 
         public AnimalContext() 
@@ -30,15 +28,15 @@ namespace AnimalKingdom
         public string Name { get; set; }
         public string Type { get; set; }
 
-        [ForeignKey("Id")]
+        [ForeignKey("CountryId")]
         public Country Country { get; set; }
     }
-    public class Country 
+    public class Country
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid CountryId { get; set; }
         public string Name { get; set; }
 
-        public List<Animal> Animals { get; set; } 
+        public List<Animal> Animals { get; set; }
     }
 }
