@@ -5,13 +5,31 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<form>
+<form asp-controller="Animal" asp-action="GetAnimals" method="get">
     <div class="mb-3">
         <label for="animalInput" class="form-label">Djurart</label>
         <input type="text" class="form-control" id="animalInput" aria-describedby="textHelp" />
-        <div id="textHelp" class="form-text">Vad är det för djurart? Ex. Hund, kanin, räv.</div>
+        <div id="textHelp" class="form-text">Vad är det för djurart? Ex. marsvin, kanin. Svenska eller latinska namnet.</div>
+    </div>
+    <div class="mb-3">
+        <label for="animalInput" class="form-label">Djurtyp</label>
+        <input type="text" class="form-control" id="animalInput" aria-describedby="textHelp" />
+        <div id="textHelp" class="form-text">Vad är det för djurtyp? Ex. hardjur, gnagare.</div>
     </div>
 
+    <input type="submit" value="CLICK" />
+
+
+    
+    @* <div class="mb-3">
+        <label for="formTextArea" class="form-label">Fakta om djuret</label>
+        <textarea class="form-control" id="formTextArea" rows="3"></textarea>
+    </div> *@
+
+    <div class="input-group mb-3">
+        <input type="file" class="form-control" id="inputFile" />
+        @* <label class="input-group-text" for="inputFile">Upload</label> *@
+    </div>
 </form>
 
 

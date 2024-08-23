@@ -2,23 +2,25 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AnimalKingdom
+namespace AnimalKingdom.Models
 {
-    public class AnimalContext: DbContext
+    public class AnimalContext : DbContext
     {
         public DbSet<Animal> Animals { get; set; }
         public DbSet<Country> Countries { get; set; }
 
         public string DbPath { get; }
 
-        public AnimalContext() 
+        public AnimalContext()
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);
-            DbPath = System.IO.Path.Join(path, "AnimalKingdom.db");
+            DbPath = Path.Join(path, "AnimalKingdom.db");
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=AnimalKingdom;ConnectRetryCount=0");
+
+        public AnimalContext(DbContextOptions<AnimalContext> options) : base(options) { }
     }
 
     public class Animal

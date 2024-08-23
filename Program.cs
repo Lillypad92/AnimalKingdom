@@ -1,8 +1,18 @@
 using AnimalKingdom;
+using Microsoft.EntityFrameworkCore;
+using AnimalKingdom.Models;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//builder.Services.AddControllers();
+//builder.Services.AddDbContext<AnimalContext>(opt => opt.UseInMemoryDatabase("AnimalKingdom"));
+builder.Services.AddDbContext<AnimalContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
@@ -12,6 +22,8 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
 }
+
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
@@ -19,25 +31,9 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
-
-//TODO: FLYTTA DETTA TILL EN ADMIN SIDA FÖR ATT SKAPA UPP DJUR/LAND VIA WEBBSIDA------------------
-//using var db = new AnimalContext();
-
-//var firstAnimal = new Animal { Name = "Kapybara", Type = "Gnagare" };
-//var secondAnimal = new Animal { Name = "Häst", Type = "Hovdjur" };
-//var thirdAnimal = new Animal { Name = "Kanin", Type = "Hardjur" };
-
-//var firstCountry = new Country { Name = "Sydamerika", Animals = new List<Animal>() };
-//var secondCountry = new Country { Name = "Centralasien", Animals = new List<Animal>() };
-//var thirdCountry = new Country { Name = "Europa", Animals = new List<Animal>() };
-//firstCountry.Animals.Add(firstAnimal);
-//secondCountry.Animals.Add(secondAnimal);
-//thirdCountry.Animals.Add(thirdAnimal);
-
-//db.Countries.AddRange(firstCountry, secondCountry, thirdCountry);
-
-//db.SaveChanges();
-//----------------------------------------------------------------------------------------------
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
 
